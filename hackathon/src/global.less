@@ -1,0 +1,88 @@
+@textColor: #AAAAAA;
+@siderColor: rgba(20, 20, 20, 0.83);
+@contentColor: rgba(20, 20, 20, 0.47);
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('assets/fonts/Montserrat-Medium.ttf');
+}
+
+html * {
+  color: @textColor;
+  font-family: 'Montserrat', serif;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.logo {
+  display: flex;
+  height: 5em;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  .img {
+    border-radius: 2px;
+    height: 3em;
+    margin-left: 1em;
+    width: 3em;
+  }
+
+  .txt {
+    color: @textColor;
+    font-family: 'Montserrat', serif;
+    font-size: 1.5em;
+  }
+}
+
+.ant-layout {
+  height: 100vh;
+
+  .sider-layout {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+
+    .ant-menu {
+      height: 100%;
+    }
+
+    .side-menu {
+      background-color: @siderColor;
+    }
+  }
+
+  .content-layout {
+    background-color: @contentColor;
+    margin-left: 200px;
+    overflow-y: auto;
+    padding: 15px;
+  }
+}
+
+.ant-typography.dc {
+  color: @textColor;
+}
+
+.footer {
+  background-color: @siderColor;
+  color: @textColor;
+  text-align: center;
+  height: auto;
+}
+
+.image-preview-none{
+  display: none;
+}
+
+.map-element-container{
+  height: 100%;
+}
+
+.map-content-container{
+  height: 380px;
+}

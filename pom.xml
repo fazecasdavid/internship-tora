@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.tora</groupId>
+    <artifactId>train-Fazecas_David</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>train-Fazecas_David</name>
+
+    <modules>
+        <module>report</module>
+
+        <module>day2-Fazecas_David</module>
+        <module>day3-Fazecas_David</module>
+        <module>day4-Fazecas_David</module>
+        <module>day5-Fazecas_David</module>
+        <module>day7-Fazecas_David</module>
+        <module>day8-Fazecas_David</module>
+        <module>day9-Fazecas_David</module>
+        <module>java-8-lambdas-exercises</module>
+        <module>stream-lambda-kata</module>
+        <module>day11-Fazecas_David</module>
+        <module>day13-Fazecas_David</module>
+        <module>day14-Fazecas_David</module>
+        <module>day15-Fazecas_David</module>
+        <module>multithreaded-file-parser-master</module>
+        <module>multithreaded-file-parser-mihai</module>
+        <module>day18-Fazecas_David-P2P</module>
+        <module>day21-Fazecas_David</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>io.github.rkamradt</groupId>
+            <artifactId>possibly</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.7</version>
+        </dependency>
+
+
+    </dependencies>
+
+
+    <profiles>
+        <profile>
+            <id>jacoco</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <version>0.8.7</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+
+</project>

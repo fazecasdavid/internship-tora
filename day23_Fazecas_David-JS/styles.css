@@ -1,0 +1,35 @@
+.input {
+    position: absolute;
+    left: 120px;
+}
+
+#browse {
+    display: block;
+    margin-top: 25px;
+    height: 100px;
+    width: 200px;
+    background-color: slateblue;
+    font-size: large;
+}
+
+#previousButton, #nextButton {
+    margin-top: 25px;
+    height: 100px;
+    width: 200px;
+    background-color: slateblue;
+    font-size: large;
+}
+
+div {
+    height: 20px;
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.chat-box>div {
+    width: 50%;
+}

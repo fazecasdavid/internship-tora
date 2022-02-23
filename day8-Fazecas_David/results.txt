@@ -1,0 +1,44 @@
+Benchmark                                      Mode  Cnt      Score        Error   Units
+
+ArrayListRepositoryBenchmark.testAdd          thrpt    5  38382.383 ± 112066.036  ops/ms
+ArrayListRepositoryBenchmark.testContains     thrpt    5      0.556 ±      0.599  ops/ms
+ArrayListRepositoryBenchmark.testRemove       thrpt    5      0.460 ±      0.226  ops/ms
+
+FastutilListRepositoryBenchmark.testAdd       thrpt    5  49131.933 ± 101336.899  ops/ms
+FastutilListRepositoryBenchmark.testContains  thrpt    5      0.318 ±      0.150  ops/ms
+FastutilListRepositoryBenchmark.testRemove    thrpt    5      0.294 ±      0.190  ops/ms
+
+FastutilSetRepositoryBenchmark.testAdd        thrpt    5  11732.661 ±   4685.611  ops/ms
+FastutilSetRepositoryBenchmark.testContains   thrpt    5  18310.553 ±   9549.107  ops/ms
+FastutilSetRepositoryBenchmark.testRemove     thrpt    5   9463.284 ±   6380.990  ops/ms
+
+HashSetRepositoryBenchmark.testAdd            thrpt    5   9761.399 ±  19144.865  ops/ms
+HashSetRepositoryBenchmark.testContains       thrpt    5  26566.193 ±   9144.001  ops/ms
+HashSetRepositoryBenchmark.testRemove         thrpt    5  10094.196 ±   4079.950  ops/ms
+
+TreeSetRepositoryBenchmark.testAdd            thrpt    5   7955.850 ±  15196.436  ops/ms
+TreeSetRepositoryBenchmark.testContains       thrpt    5   9886.626 ±   3133.771  ops/ms
+TreeSetRepositoryBenchmark.testRemove         thrpt    5  13452.988 ±   4656.219  ops/ms
+
+
+Benchmark                                      Mode  Cnt      Score       Error   Units
+ArrayListRepositoryBenchmark.testAdd          thrpt    5  37472.464 ± 23864.982  ops/ms
+ArrayListRepositoryBenchmark.testContains     thrpt    5      0.577 ±     0.225  ops/ms
+ArrayListRepositoryBenchmark.testRemove       thrpt  100      0.629 ±     0.049  ops/ms
+
+FastutilListRepositoryBenchmark.testAdd       thrpt  100  76289.245 ± 14044.825  ops/ms
+FastutilListRepositoryBenchmark.testContains  thrpt  100      0.322 ±     0.013  ops/ms
+FastutilListRepositoryBenchmark.testRemove    thrpt  100      0.314 ±     0.013  ops/ms
+
+FastutilSetRepositoryBenchmark.testAdd        thrpt  100   9566.912 ±   798.033  ops/ms
+FastutilSetRepositoryBenchmark.testContains   thrpt  100  18926.063 ±  1223.571  ops/ms
+FastutilSetRepositoryBenchmark.testRemove     thrpt  100   7996.149 ±   697.565  ops/ms
+
+HashSetRepositoryBenchmark.testAdd            thrpt  100   9923.810 ±   774.651  ops/ms
+HashSetRepositoryBenchmark.testContains       thrpt  100  24554.336 ±  1424.989  ops/ms
+HashSetRepositoryBenchmark.testRemove         thrpt  100  12667.200 ±  1088.949  ops/ms
+
+TreeSetRepositoryBenchmark.testAdd            thrpt  100   9590.467 ±   335.987  ops/ms
+TreeSetRepositoryBenchmark.testContains       thrpt  100  10639.361 ±   445.083  ops/ms
+TreeSetRepositoryBenchmark.testRemove         thrpt  100  13121.781 ±   494.866  ops/ms
+

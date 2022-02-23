@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery-3.6.0.js"></script>
+    <script src="script.js" defer></script>
+    <title>Chat APP</title>
+</head>
+<body>
+
+<div>Your Username is :</div>
+<div id="username_label"></div>
+
+<label for="username_input">USERNAME:</label>
+<input type="text" id="username_input" name="username_input" class="input"><br><br>
+
+<label for="name_input">NAME:</label>
+<input type="text" id="name_input" name="name_input" class="input"><br><br>
+
+<label for="content_input">CONTENT:</label>
+<input type="text" id="content_input" name="content_input" class="input"><br><br>
+
+<br><br>
+<button id="username" type="button">username</button>
+<button id="hello" type="button">!hello</button>
+<button id="ack" type="button">!ack</button>
+<button id="send" type="button">!send</button>
+<button id="group" type="button">!group</button>
+<button id="ack-g" type="button">!ack-g</button>
+<button id="bye" type="button">!bye</button>
+<button id="ls" type="button">!ls</button>
+<button id="byebye" type="button">!byebye</button>
+<br>
+<button id="getMessages" type="button">GET MESSAGES</button>
+
+<div>Your friends</div>
+<div id="friends"></div>
+<div class="chat-box">
+    <div>Your chat messages :</div>
+    <div id="chat_messages"></div>
+
+    <div>Your util messages :</div>
+    <div id="util_messages"></div>
+</div>
+</body>
+</html>

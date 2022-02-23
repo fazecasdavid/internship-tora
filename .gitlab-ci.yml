@@ -1,0 +1,61 @@
+#include:
+#  - template: Code-Quality.gitlab-ci.yml
+
+image: maven:3.8.1-jdk-11
+
+default:
+  interruptible: true
+  retry: 2
+
+
+variables:
+  # prevent git clean to happen after repo checkout
+  #GIT_CLEAN_FLAGS: none
+  # maven related
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+cache:
+  paths:
+  - .m2/repository/
+  - target/
+
+stages:
+  - test
+
+################################################################################
+## Stage: test
+###################
+# Runs all sort of checks (tests) to validate functionality and regression
+################################################################################
+
+unit_tests_with_coverage:
+  stage: test
+  before_script:
+  - mkdir -p target
+  - if [[ ! -f "target/codacy-coverage-reporter-assembly-latest.jar" ]]; then wget -O target/codacy-coverage-reporter-assembly-latest.jar $(curl https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | grep url.*assembly | cut -d \" -f 4);fi
+  script:
+  - mvn verify -P jacoco
+  after_script:
+  - java -cp target/codacy-coverage-reporter-assembly-latest.jar com.codacy.CodacyCoverageReporter report -l Java -r report/target/site/jacoco-aggregate/jacoco.xml
+# - bash <(curl -s https://codecov.io/bash)
+  only:
+#    refs:
+#    - merge_requests
+    changes:
+    - "**/src/**/*"
+  allow_failure: false
+  timeout: 50 minutes
+  retry: 0
+  needs: []
+  artifacts:
+    expire_in: 1 day
+    reports:
+      junit: "*/target/surefire-reports/TEST-*.xml"
+
+
+#code_quality:
+#  timeout: 50 minutes
+#  retry: 0
+#  needs: []
+#  artifacts:
+#    paths: [gl-code-quality-report.json]

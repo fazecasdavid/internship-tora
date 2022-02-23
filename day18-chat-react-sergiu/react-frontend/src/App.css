@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+}
+
+.action {
+    display: flex;
+    margin: 12pt;
+    padding: 15pt;
+    flex-direction: column;
+    border-style: groove;
+    border-radius: 15pt;
+    width: 40%;
+}
+
+label {
+    margin: 3pt;
+    font-size: 15pt;
+    font-family: sans-serif
+}
+
+input {
+    font-size: 15pt;
+    font-family: sans-serif;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chat-box {
+    display: flex;
+    margin: 15pt;
+    padding: 15pt;
+    flex-direction: column;
+    border-style: groove;
+    border-radius: 15pt;
+    width: 45%;
+    align-items: center;
+    justify-content: center;
+}

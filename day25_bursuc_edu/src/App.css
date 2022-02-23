@@ -1,0 +1,33 @@
+.input {
+  position: absolute;
+  left: 120px;
+}
+
+#browse {
+  display: block;
+  margin-top: 25px;
+  height: 100px;
+  width: 200px;
+  background-color: slateblue;
+  font-size: large;
+}
+
+#previousButton, #nextButton {
+  margin-top: 25px;
+  height: 100px;
+  width: 200px;
+  background-color: slateblue;
+  font-size: large;
+}
+
+
+
+.bodyTag {
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+  flex-direction: column;
+
+  justify-content: space-between;
+}

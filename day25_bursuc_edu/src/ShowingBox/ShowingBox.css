@@ -1,0 +1,36 @@
+.chat-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.friends-box {
+    margin-left:100px;
+    margin-right: 100px;
+}
+
+.chat-messages {
+    margin-left:100px;
+    margin-right: 100px;
+}
+
+.util-messages {
+    margin-left:100px;
+    margin-right: 100px;
+}
+
+.ShowingBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2%;
+}
+
+li:nth-child(odd) {
+    background-color: #bababa;
+}
+li:nth-child(even) {
+    background-color: #696969;
+}
+
+

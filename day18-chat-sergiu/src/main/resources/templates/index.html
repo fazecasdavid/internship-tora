@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta charset="UTF-8">
+    <title>Chat</title>
+</head>
+<body>
+    <div class="Options">
+        <div class="SendRequest">
+            <label for="SendRequest">
+            Send request:
+            </label>
+            <input id="sendRequest" type="text" placeholder="To User"/>
+            <input type="button" value="Submit" onclick="sendRequest"/>
+        </div>
+
+        <div class="AckRequest">
+            <label for="AckRequest">
+                Ack request:
+            </label>
+            <input id="ackRequest" type="text" placeholder="To User"/>
+            <input type="button" value="Submit" onclick="ackRequest"/>
+        </div>
+
+        <div class="SendMessage">
+            <label for="SendMessageUser">
+                User:
+            </label>
+            <input id="sendMessageUser" type="text" placeholder="To User"/>
+
+            <label for="SendMessageContent">
+                Content:
+            </label>
+
+            <input id="sendMessageContent" type="text" placeholder="Content"/>
+            <input type="button" value="Submit" onclick="sendMessage"/>
+        </div>
+
+        <div class="Bye">
+            <input type="button" value="Bye" onclick="bye"/>
+        </div>
+    </div>
+</body>
+</html>

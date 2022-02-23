@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+    <script src="main.js" defer></script>
+    <script src="jquery-3.6.0.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta charset="UTF-8">
+    <title>Chat</title>
+</head>
+<body>
+<div class="top">
+    <div class="action">
+        <label for="myUsername">
+            Please login:
+        </label>
+        <input id="myUsername" type="text" placeholder="Type your user"/>
+        <input type="button" value="Login" onclick="login()"/>
+    </div>
+
+    <div class="individualMessage">
+        <div class="action">
+            <label for="SendRequest">
+                Send request:
+            </label>
+            <input id="sendRequest" type="text" placeholder="To User"/>
+            <input type="button" value="Request" onclick="sendRequest()"/>
+        </div>
+
+        <div class="action">
+            <label for="AckRequest">
+                Ack request:
+            </label>
+            <input id="ackRequest" type="text" placeholder="To User"/>
+            <input type="button" value="Accept" onclick="ackRequest()"/>
+        </div>
+    </div>
+
+    <div class="groupMessage">
+        <div class="action">
+            <label for="groupInvite">
+                Send group invite:
+            </label>
+            <div id="groupInvite">
+                <input id="groupId" type="text" placeholder="Group Name"/>
+                <input id="userId" type="text" placeholder="To User"/>
+                <input type="button" value="Request" onclick="sendGroupInvite()"/>
+            </div>
+        </div>
+
+        <div class="action">
+            <label for="groupAck">
+                Accept group invite:
+            </label>
+            <div id="groupAck">
+                <input id="ackGroupId" type="text" placeholder="Accept group ID"/>
+                <input type="button" value="Accept" onclick="ackGroupInvite()"/>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="top">
+    <div class="utilMessages messages action">
+        <label for="utilMessages">Utils Messages:</label>
+        <input id="utilMessages" type="text" disabled>
+    </div>
+    <div class="action" id="sendMessage">
+        <label for="SendMessageUser">
+            User:
+        </label>
+        <input id="sendMessageUser" type="text" placeholder="To User"/>
+
+        <label for="SendMessageContent">
+            Content:
+        </label>
+
+        <input id="sendMessageContent" type="text" placeholder="Content"/>
+        <input type="button" value="Send" onclick="sendMessage()"/>
+    </div>
+    <div class="chatMessages messages action">
+        <label for="chatMessages">Chat:</label>
+        <input id="chatMessages" type="text" disabled>
+    </div>
+
+
+    <div class="bye">
+        <input type="button" value="Bye" onclick="bye()"/>
+    </div>
+</div>
+
+
+<div class="chat-box">
+    <div>Your chat messages :</div>
+    <div id="chat_messages"></div>
+
+    <div>Your util messages :</div>
+    <div id="util_messages"></div>
+</div>
+
+
+
+</body>
+</html>
